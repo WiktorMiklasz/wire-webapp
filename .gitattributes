@@ -5,6 +5,7 @@
 
 # Denote all files that are truly binary and should not be modified.
 *.eot binary
+*.tgz binary
 *.jar binary
 *.jpg binary
 *.otf binary

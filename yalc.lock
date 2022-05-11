@@ -1,0 +1,15 @@
+{
+  "version": "v1",
+  "packages": {
+    "@wireapp/core": {
+      "signature": "2439cc2901c59303456bf99329369e56",
+      "file": true,
+      "replaced": "./wireapp-core-25.2.0.tgz"
+    },
+    "@wireapp/api-client": {
+      "signature": "6226da920d3a2994b5c71af911ef6734",
+      "file": true,
+      "replaced": "./wireapp-api-client-19.0.0.tgz"
+    }
+  }
+}
