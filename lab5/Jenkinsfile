@@ -6,7 +6,7 @@ pipeline {
 	stages {
 		stage('Build') {
 			steps {
-				dir('ITE/GCL04/WM400039/lab5')
+				dir('/lab5')
 					{	
 						sh 'docker build -f ./build_dockerfile -t app_build:latest .'
 						sh 'docker run app_build'
@@ -15,7 +15,7 @@ pipeline {
 			}
 		stage('Test') {
 			steps {
-			        dir('ITE/GCL04/WM400039/lab5')
+			        dir('/lab5')
 					{ 
 						sh 'docker build -f ./test_dockerfile -t app_test:latest .'
 						sh 'docker run app_test'
@@ -23,8 +23,8 @@ pipeline {
 				}
 			}
 		stage('Publish') {
-				steps{
-					dir('ITE/GCL04/WM400039/lab5')
+			steps{
+				dir('/lab5')
 					{
 						sh 'npm publish'
 					}
