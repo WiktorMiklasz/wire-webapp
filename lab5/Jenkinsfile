@@ -24,12 +24,9 @@ pipeline {
 			}
 		stage('Publish') {
 			steps{
-				dir('/lab5')
-					{
 						sh 'npm publish'
-					}
-					}
 				}
+			}
 		}
 }
 
