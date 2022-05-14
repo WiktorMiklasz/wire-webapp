@@ -6,7 +6,7 @@ pipeline {
 	stages {
 		stage('Build') {
 			steps {
-				dir('Wireapp/lab5')
+				dir('var/jenkins_home/workspace/Wireapp/lab5')
 					{	
 						sh 'docker build -f ./build_dockerfile -t app_build:latest .'
 						sh 'docker run app_build'
@@ -15,7 +15,7 @@ pipeline {
 			}
 		stage('Test') {
 			steps {
-			        dir('Wireapp/lab5')
+			        dir('var/jenkins_home/workspace/Wireapp/lab5')
 					{ 
 						sh 'docker build -f ./test_dockerfile -t app_test:latest .'
 						sh 'docker run app_test'
