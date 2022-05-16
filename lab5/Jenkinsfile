@@ -24,7 +24,8 @@ pipeline {
 			}
 		stage('Publish') {
 			steps{
-						sh 'npm publish'
+					sh 'docker tag app_build promoqwerty/devops:latest'	
+					sh 'docker push promoqwerty/devops:latest'
 				}
 			}
 		}
